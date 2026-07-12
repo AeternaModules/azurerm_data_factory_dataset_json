@@ -1,3 +1,7 @@
+output "data_factory_dataset_jsons_id" {
+  description = "Map of id values across all data_factory_dataset_jsons, keyed the same as var.data_factory_dataset_jsons"
+  value       = { for k, v in azurerm_data_factory_dataset_json.data_factory_dataset_jsons : k => v.id }
+}
 output "data_factory_dataset_jsons_additional_properties" {
   description = "Map of additional_properties values across all data_factory_dataset_jsons, keyed the same as var.data_factory_dataset_jsons"
   value       = { for k, v in azurerm_data_factory_dataset_json.data_factory_dataset_jsons : k => v.additional_properties }
