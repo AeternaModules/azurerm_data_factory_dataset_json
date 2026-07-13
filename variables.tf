@@ -43,15 +43,15 @@ EOT
     parameters            = optional(map(string))
     azure_blob_storage_location = optional(object({
       container                 = string
-      dynamic_container_enabled = optional(bool) # Default: false
-      dynamic_filename_enabled  = optional(bool) # Default: false
-      dynamic_path_enabled      = optional(bool) # Default: false
+      dynamic_container_enabled = optional(bool)
+      dynamic_filename_enabled  = optional(bool)
+      dynamic_path_enabled      = optional(bool)
       filename                  = string
       path                      = string
     }))
     http_server_location = optional(object({
-      dynamic_filename_enabled = optional(bool) # Default: false
-      dynamic_path_enabled     = optional(bool) # Default: false
+      dynamic_filename_enabled = optional(bool)
+      dynamic_path_enabled     = optional(bool)
       filename                 = string
       path                     = string
       relative_url             = string
